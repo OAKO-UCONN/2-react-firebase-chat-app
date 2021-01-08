@@ -12,6 +12,9 @@ firebase.initializeApp({
   // your config
 })
 
+const auth = firebase.auth();
+const firestore = firebase.firestore();
+
 function App() {
   return (
     <div className="App">
