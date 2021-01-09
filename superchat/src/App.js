@@ -1,4 +1,5 @@
 // import logo from './logo.svg';
+import dotenv from 'dotenv';
 import './App.css';
 
 import firebase from 'firebase/app';
@@ -8,18 +9,25 @@ import 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
+dotenv.config();
+console.log(process.env);
+
 firebase.initializeApp({
-  // your config
+
 })
 
 const auth = firebase.auth();
 const firestore = firebase.firestore();
 
+
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-
+        <script src="/__/firebase/8.2.2/firebase-app.js"></script>
+        <script src="/__/firebase/8.2.2/firebase-analytics.js"></script>
+        <script src="/__/firebase/init.js"></script>
       </header>
     </div>
   );
@@ -37,3 +45,4 @@ function App() {
         //   Learn React
         // </a> */}
 export default App;
+
